@@ -19,6 +19,7 @@ function close_pledgeList() {
 // Call the function close_pledgeList() when close_pledgeList button is clicked
 close_pL.onclick = close_pledgeList;
 
+// Radio Buttons
 radioButtons.forEach((radio) => {
   radio.addEventListener("click", handleRadioClick);
 });
