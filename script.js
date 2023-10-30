@@ -1,3 +1,14 @@
+// Back this Project Button
+
+const pL_button = document.getElementById("pledgeList_button");
+
+function display_pledgeList() {
+  document.getElementById("pledgeList").style.display = "block";
+}
+
+// Call the function display_pledgeList() when pledgeList_button is clicked
+pL_button.onclick = display_pledgeList;
+
 /*const box = document.getElementById("box");
 let radioBtns = document.getElementsByTagName("input");
 
