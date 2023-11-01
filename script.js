@@ -32,7 +32,9 @@ function handleRadioClick() {
   }
 }
 
-/*const box = document.getElementById("box");
+/*
+
+const box = document.getElementById("box");
 let radioBtns = document.getElementsByTagName("input");
 
 function handleRadioClick() {
