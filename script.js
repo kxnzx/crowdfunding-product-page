@@ -3,7 +3,7 @@
 
 const pL_button = document.getElementById("pledgeList_button");
 const close_pL = document.getElementById("close_pledgeList");
-const radioButtons = document.querySelectorAll("input");
+const radioButtons = document.querySelectorAll("input[type=radio]");
 
 function display_pledgeList() {
   document.getElementById("pledgeList").style.display = "block";
@@ -21,16 +21,33 @@ close_pL.onclick = close_pledgeList;
 
 // Radio Buttons
 radioButtons.forEach((radio) => {
-  radio.addEventListener("click", handleRadioClick);
+  console.log(radioButtons);
+  radio.addEventListener("click", () => {
+    console.log(radio);
+    form.style.display = "block";
+  });
 });
 
+/*
 function handleRadioClick() {
+  //console.log(handleRadioClick);
   if (document.getElementByTagName("input").checked) {
     form.style.display = "block";
   } else {
     property.radio.checked = false;
   }
 }
+
+
+('click', () => {
+		document.querySelector('.mobile-btn__close-icon').classList.remove('opened')
+		document.querySelector('.mobile-btn__open-icon').classList.remove('closed')
+		document.querySelector('.mobile-btn__open-icon').classList.add('opened')
+		mobileLinksContainer.classList.remove('opened')
+		bodyHtml.classList.remove('overflow')
+	})
+})
+*/
 
 /*
 
