@@ -23,9 +23,9 @@ close_pL.onclick = close_pledgeList;
 radioButtons.forEach((radio) => {
   //console.log(radioButtons);
   radio.addEventListener("click", () => {
-    const form = document.querySelector("form");
+    const form = radio.parentElement.querySelector("form");
     form.style.display = "block";
-    console.log(form);
+    //console.log(form);
   });
 });
 
