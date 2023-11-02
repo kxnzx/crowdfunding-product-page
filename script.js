@@ -28,7 +28,7 @@ radioButtons.forEach((radio) => {
       const form = radio.parentElement.querySelector("form");
       form.style.display = "block";
     } else {
-      console.log("radio is unchecked");
+      console.log("radio is unclicked");
       form.style.display = "none";
     }
   });
