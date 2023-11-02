@@ -23,7 +23,6 @@ close_pL.onclick = close_pledgeList;
 radioButtons.forEach((radio) => {
   //console.log(radioButtons);
   radio.addEventListener("click", () => {
-    //console.log(radio);
     const form = document.querySelector("form");
     form.style.display = "block";
     console.log(form);
