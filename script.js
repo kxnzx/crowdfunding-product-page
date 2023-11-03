@@ -36,6 +36,16 @@ radioButtons.forEach((radio) => {
 });
 
 /*
+// Continue Buttons
+continueButtons.forEach((continueButton) => {
+  continueButton.addEventListener("click", () => {
+    console.log("Continue Button is clicked");
+    completion_message.style.display = "block";
+  });
+});
+*/
+
+/*
 // Radio Buttons
 radioButtons.forEach((radio) => {
   //console.log(radioButtons);
@@ -48,16 +58,6 @@ radioButtons.forEach((radio) => {
       console.log("radio is unclicked");
       form.style.display = "none";
     }
-  });
-});
-*/
-
-/*
-// Continue Buttons
-continueButtons.forEach((continueButton) => {
-  continueButton.addEventListener("click", () => {
-    console.log("Continue Button is clicked");
-    completion_message.style.display = "block";
   });
 });
 */
