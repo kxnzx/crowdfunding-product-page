@@ -22,17 +22,17 @@ function close_pledgeList() {
 close_pL.onclick = close_pledgeList;
 
 // Radio Buttons
-radioButtons.forEach((radio) => {
-  //console.log(radioButtons);
+radioButtons.forEach(radio => {
+
   radio.addEventListener("click", () => {
-    if (radio.checked) {
-      console.log("radio is clicked");
-      const form = radio.parentElement.querySelector("form");
-      form.style.display = "block";
-    } else {
-      console.log("radio is unclicked");
+    const form = radio.parentElement.querySelector("form");
+    
+    radioButtons.forEach(otherRadio => {
+      const form = otherRadio.parentElement.querySelector("form");
       form.style.display = "none";
-    }
+    })
+
+    if (radio.checked) form.style.display = "block";
   });
 });
 
