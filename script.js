@@ -26,8 +26,8 @@ radioButtons.forEach((radio) => {
   radio.addEventListener("click", () => {
     const form = radio.parentElement.querySelector("form");
 
-    radioButtons.forEach((otherRadio) => {
-      const form = otherRadio.parentElement.querySelector("form");
+    radioButtons.forEach((otherRadioButtons) => {
+      const form = otherRadioButtons.parentElement.querySelector("form");
       form.style.display = "none";
     });
 
