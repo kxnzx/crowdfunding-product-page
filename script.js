@@ -23,6 +23,21 @@ close_pL.onclick = close_pledgeList;
 
 // Radio Buttons
 radioButtons.forEach((radio) => {
+  radio.addEventListener("click", () => {
+    const form = radio.parentElement.querySelector("form");
+
+    radioButtons.forEach((otherRadio) => {
+      const form = otherRadio.parentElement.querySelector("form");
+      form.style.display = "none";
+    });
+
+    if (radio.checked) form.style.display = "block";
+  });
+});
+
+/*
+// Radio Buttons
+radioButtons.forEach((radio) => {
   //console.log(radioButtons);
   radio.addEventListener("click", () => {
     if (radio.checked) {
@@ -35,6 +50,7 @@ radioButtons.forEach((radio) => {
     }
   });
 });
+*/
 
 /*
 // Continue Buttons
