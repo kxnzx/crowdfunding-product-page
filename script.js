@@ -4,6 +4,8 @@
 const pL_button = document.getElementById("pledgeList_button");
 const close_pL = document.getElementById("close_pledgeList");
 const radioButtons = document.querySelectorAll("input[type=radio]");
+const continueButtons = document.querySelectorAll("button[type=submit]");
+const completion_message = document.querySelector(".completion_message");
 
 function display_pledgeList() {
   document.getElementById("pledgeList").style.display = "block";
@@ -33,6 +35,16 @@ radioButtons.forEach((radio) => {
     }
   });
 });
+
+/*
+// Continue Buttons
+continueButtons.forEach((continueButton) => {
+  continueButton.addEventListener("click", () => {
+    console.log("Continue Button is clicked");
+    completion_message.style.display = "block";
+  });
+});
+*/
 
 /*
 function handleRadioClick() {
