@@ -77,14 +77,14 @@ function validate() {
 function handleSubmit(e) {
   e.preventDefault();
   if (validate()) {
+    //console.log("This is true");
     const stock3 = document.getElementById("stock3");
     const input4 = document.getElementById("pledge4");
     let stockAmount = 1;
-    //console.log("This is true");
 
-    const calculation = stockAmount - input4.value;
+    const result = stockAmount - input4.value;
 
-    stock3.innerHTML = calculation;
+    stock3.innerHTML = result;
   }
 }
 
