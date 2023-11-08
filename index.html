@@ -43,7 +43,11 @@
         <button class="bookmark_button">Bookmark</button>
       </section>
       <section>
-        $89,914 of $100,000 backed 5,007 total backers 56 days left
+        <ul>
+          <li><span id="currentAmount">$89,914</span> of $100,000 backed</li>
+          <li><span id="currentBackers">5,007</span> total backers</li>
+          <li><span>56</span> days left</li>
+        </ul>   
       </section>
       <section>
         <h2>About this project</h2>
@@ -102,7 +106,7 @@
         <form action="">
           <fieldset>
             <legend>Enter your pledge</legend>
-            <label for=""></label><input type="text" ></input> <button type="submit" class="continueButton">Continue</button>
+            <label for=""></label><input id="pledge1" type="text" ></input> <button type="submit" class="continueButton">Continue</button>
           </fieldset>
         </form>
       </section>
@@ -115,13 +119,13 @@
           launch our promotional campaign, and you’ll be added to a special
           Backer member list.
         </p>
-        <p>101 left</p>
+        <p><span id="stock1">101</span> left</p>
         <!-- Selected pledge start -->
 
         <form action="">
           <fieldset>
             <legend>Enter your pledge</legend>
-            <label for=""></label><input type="text" placeholder="$25"></input> <button type="submit" class="continueButton">Continue</button>
+            <label for=""></label><input id="pledge2" type="text" placeholder="$25"></input> <button type="submit" class="continueButton">Continue</button>
           </fieldset>
         </form>
       </section>
@@ -134,13 +138,13 @@
           You get a Black Special Edition computer stand and a personal thank
           you. You’ll be added to our Backer member list. Shipping is included.
         </p>
-        <p>64 left</p>
+        <p><span id="stock2">64</span> left</p>
         <!-- Selected pledge start -->
 
         <form action="">
           <fieldset>
             <legend>Enter your pledge</legend>
-            <label for=""></label><input type="text" placeholder="$75"> <button type="submit" class="continueButton">Continue</button>
+            <label for=""></label><input id="pledge3" type="text" placeholder="$75"> <button type="submit" class="continueButton">Continue</button>
           </fieldset>
         </form>
       </section>
@@ -154,13 +158,15 @@
           personal thank you. You’ll be added to our Backer member list.
           Shipping is included.
         </p>
-        <p>0 left</p>
+        <p><span id="stock3">1</span> left</p>
         <!-- Selected pledge  start -->
 
-        <form action="">
+        <form id="lastForm" action="">
           <fieldset>
             <legend>Enter your pledge</legend>
-            <label for=""></label><input type="text" placeholder="$200"> <button type="submit" class="continueButton">Continue</button>
+            <label for=""></label><input id="pledge4" type="text" placeholder="$200">
+            <small></small>
+            <button type="submit" class="continueButton">Continue</button>
           </fieldset>
         </form>
       </section>
