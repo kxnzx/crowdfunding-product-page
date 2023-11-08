@@ -79,10 +79,15 @@ function handleSubmit(e) {
   if (validate()) {
     //console.log("This is true");
     const stock3 = document.getElementById("stock3");
-    const input4 = document.getElementById("pledge4");
+    //const input4 = document.getElementById("pledge4");
+    const cBtn = document.getElementById("continueButton");
+
+    console.log(cBtn);
+
     let stockAmount = 1;
 
-    const result = stockAmount - input4.value;
+    const result = stockAmount - cBtn.value;
+    console.log(result);
 
     stock3.innerHTML = result;
   }
