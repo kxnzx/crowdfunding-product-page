@@ -20,8 +20,8 @@ const input3 = document.getElementById("pledge3");
 //const input4 = document.getElementById("pledge4");
 
 // Outputs
-const output1 = document.getElementById("currentAmount");
-const output2 = document.getElementById("totalBackers");
+//const output1 = document.getElementById("currentAmount");
+//const output2 = document.getElementById("totalBackers");
 
 // Stock
 const stock1 = document.getElementById("stock1");
@@ -90,6 +90,25 @@ function handleSubmit(e) {
 
     stockAmount--;
     stock3.innerHTML = stockAmount;
+
+    // OUTPUT
+    const output1 = document.getElementById("currentAmount");
+    const output2 = document.getElementById("currentBackers");
+
+    let currentAmount = 89914;
+    console.log(currentAmount);
+
+    const totalAmount = parseInt(currentAmount) + parseInt(input4.value);
+    console.log(input4.value);
+    console.log(totalAmount);
+    output1.innerHTML = "$" + new Intl.NumberFormat().format(totalAmount);
+
+    let currentBackers = 5007;
+    console.log(currentBackers);
+
+    currentBackers++;
+    output2.innerHTML = new Intl.NumberFormat().format(currentBackers);
+    console.log(currentBackers);
   }
 }
 
