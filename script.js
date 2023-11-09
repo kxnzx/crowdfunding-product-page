@@ -79,18 +79,17 @@ function handleSubmit(e) {
   if (validate()) {
     //console.log("This is true");
     const stock3 = document.getElementById("stock3");
+    //console.log(stock3);
     const input4 = document.getElementById("pledge4");
+    //console.log(input4);
     const cBtn = document.getElementById("continueButton");
     //console.log(cBtn);
 
-    cBtn.addEventListener("click", () => {
-      let stockAmount = 1;
-      //console.log(stockAmount);
+    let stockAmount = 1;
+    //console.log(stockAmount);
 
-      stockAmount--;
-      stock3.innerHTML = stockAmount;
-      //console.log(stock3);
-    });
+    stockAmount--;
+    stock3.innerHTML = stockAmount;
   }
 }
 
