@@ -116,10 +116,13 @@ function handleSubmit(e) {
 // ADDING THE SUBMIT EVENTLISTENER TO THE FORM
 lastForm.addEventListener("submit", handleSubmit);
 
-// Selecting all forms: (this does not work)
-//forms.addEventListener("submit", handleSubmit);
-//console.log(forms);
-// Uncaught TypeError: forms.addEventListener is not a function
+/*
+Selecting all forms: (this does not work)
+
+forms.addEventListener("submit", handleSubmit);
+console.log(forms);
+Uncaught TypeError: forms.addEventListener is not a function
+*/
 
 /*
 function validate() {
