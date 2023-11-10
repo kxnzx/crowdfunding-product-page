@@ -3,6 +3,7 @@
 
 // Form
 const lastForm = document.getElementById("lastForm");
+//const forms = document.querySelectorAll("form");
 
 // Buttons
 const pL_button = document.getElementById("pledgeList_button");
@@ -114,6 +115,9 @@ function handleSubmit(e) {
 
 // ADDING THE SUBMIT EVENTLISTENER TO THE FORM
 lastForm.addEventListener("submit", handleSubmit);
+//forms.addEventListener("submit", handleSubmit);
+//console.log(forms);
+// Uncaught TypeError: forms.addEventListener is not a function
 
 /*
 function validate() {
