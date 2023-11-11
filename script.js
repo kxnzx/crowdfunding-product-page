@@ -2,6 +2,7 @@
 "use strict";
 
 // Form
+const form2 = document.getElementById("form2");
 const form3 = document.getElementById("form3");
 const form4 = document.getElementById("form4");
 
@@ -16,7 +17,7 @@ const completion_message = document.querySelector(".completion_message");
 
 // Inputs
 const input1 = document.getElementById("pledge1");
-const input2 = document.getElementById("pledge2");
+//const input2 = document.getElementById("pledge2");
 //const input3 = document.getElementById("pledge3");
 //const input4 = document.getElementById("pledge4");
 
@@ -25,7 +26,7 @@ const input2 = document.getElementById("pledge2");
 //const output2 = document.getElementById("totalBackers");
 
 // Stock
-const stock1 = document.getElementById("stock1");
+//const stock1 = document.getElementById("stock1");
 //const stock2 = document.getElementById("stock2");
 //const stock3 = document.getElementById("stock3");
 
@@ -56,6 +57,23 @@ radioButtons.forEach((radio) => {
     if (radio.checked) form.style.display = "block";
   });
 });
+
+// Validator 2
+function validate2() {
+  const input2 = document.getElementById("pledge2");
+  const error2 = document.getElementById("small2");
+  let validator = true;
+  if (input2.value < 25) {
+    input2.style.borderColor = "red";
+    error2.innerText = "Minimum pledge needs to be $25";
+    validator = false;
+  } else {
+    input2.style.borderColor = "";
+    error2.innerText = "";
+    validator = true;
+  }
+  return validator;
+}
 
 // Validator 3
 function validate3() {
@@ -89,6 +107,45 @@ function validate4() {
     validator = true;
   }
   return validator;
+}
+
+// Form Element 2
+function handleSubmit2(e) {
+  e.preventDefault();
+  if (validate2()) {
+    //console.log("This is true");
+    const stock1 = document.getElementById("stock1");
+    //console.log(stock1);
+    const input2 = document.getElementById("pledge2");
+    //console.log(input2);
+    const cBtn2 = document.getElementById("continueButton2");
+    //console.log(cBtn2);
+
+    let stockAmount = 101;
+    //console.log(stockAmount);
+
+    stockAmount--;
+    stock1.innerHTML = stockAmount;
+
+    // OUTPUT 3
+    const output1 = document.getElementById("currentAmount");
+    const output2 = document.getElementById("currentBackers");
+
+    let currentAmount = 89914;
+    console.log(currentAmount);
+
+    const totalAmount2 = parseInt(currentAmount) + parseInt(input2.value);
+    console.log(input2.value);
+    console.log(totalAmount2);
+    output1.innerHTML = "$" + new Intl.NumberFormat().format(totalAmount2);
+
+    let currentBackers = 5007;
+    console.log(currentBackers);
+
+    currentBackers++;
+    output2.innerHTML = new Intl.NumberFormat().format(currentBackers);
+    console.log(currentBackers);
+  }
 }
 
 // Form Element 3
@@ -170,6 +227,7 @@ function handleSubmit4(e) {
 }
 
 // ADDING THE SUBMIT EVENTLISTENER TO THE FORMS
+form2.addEventListener("submit", handleSubmit2);
 form3.addEventListener("submit", handleSubmit3);
 form4.addEventListener("submit", handleSubmit4);
 
