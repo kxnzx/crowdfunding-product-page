@@ -28,4 +28,8 @@ form {
 
 .completion_message {
   display: none;
+}
+
+.display_completion_message {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

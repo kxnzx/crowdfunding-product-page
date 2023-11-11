@@ -141,6 +141,8 @@ function handleSubmit1(e) {
     currentBackers++;
     output2.innerHTML = new Intl.NumberFormat().format(currentBackers);
     console.log(currentBackers);
+
+    completion_message.classList.add("display_completion_message");
   }
 }
 
@@ -180,6 +182,8 @@ function handleSubmit2(e) {
     currentBackers++;
     output2.innerHTML = new Intl.NumberFormat().format(currentBackers);
     console.log(currentBackers);
+
+    completion_message.classList.add("display_completion_message");
   }
 }
 
@@ -219,6 +223,8 @@ function handleSubmit3(e) {
     currentBackers++;
     output2.innerHTML = new Intl.NumberFormat().format(currentBackers);
     console.log(currentBackers);
+
+    completion_message.classList.add("display_completion_message");
   }
 }
 
@@ -258,6 +264,8 @@ function handleSubmit4(e) {
     currentBackers++;
     output2.innerHTML = new Intl.NumberFormat().format(currentBackers);
     console.log(currentBackers);
+
+    completion_message.classList.add("display_completion_message");
   }
 }
 
