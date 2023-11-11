@@ -2,8 +2,8 @@
 "use strict";
 
 // Form
-const lastForm = document.getElementById("lastForm");
-const forms = document.querySelectorAll("form");
+const form3 = document.getElementById("form3");
+const form4 = document.getElementById("form4");
 
 // Buttons
 const pL_button = document.getElementById("pledgeList_button");
@@ -17,7 +17,7 @@ const completion_message = document.querySelector(".completion_message");
 // Inputs
 const input1 = document.getElementById("pledge1");
 const input2 = document.getElementById("pledge2");
-const input3 = document.getElementById("pledge3");
+//const input3 = document.getElementById("pledge3");
 //const input4 = document.getElementById("pledge4");
 
 // Outputs
@@ -26,7 +26,7 @@ const input3 = document.getElementById("pledge3");
 
 // Stock
 const stock1 = document.getElementById("stock1");
-const stock2 = document.getElementById("stock2");
+//const stock2 = document.getElementById("stock2");
 //const stock3 = document.getElementById("stock3");
 
 function display_pledgeList() {
@@ -57,52 +57,69 @@ radioButtons.forEach((radio) => {
   });
 });
 
-// Validator
-function validate() {
-  const input4 = document.getElementById("pledge4");
-  const error = document.querySelector("small");
+// Validator 3
+function validate3() {
+  const input3 = document.getElementById("pledge3");
+  const error3 = document.getElementById("small3");
   let validator = true;
-  if (input4.value < 200) {
-    input4.style.borderColor = "red";
-    error.innerText = "Minimum pledge needs to be $200";
+  if (input3.value < 75) {
+    input3.style.borderColor = "red";
+    error3.innerText = "Minimum pledge needs to be $75";
     validator = false;
   } else {
-    input4.style.borderColor = "";
-    error.innerText = "";
+    input3.style.borderColor = "";
+    error3.innerText = "";
     validator = true;
   }
   return validator;
 }
 
-// Form Element
-function handleSubmit(e) {
-  e.preventDefault();
-  if (validate()) {
-    //console.log("This is true");
-    const stock3 = document.getElementById("stock3");
-    //console.log(stock3);
-    const input4 = document.getElementById("pledge4");
-    //console.log(input4);
-    const cBtn = document.getElementById("continueButton");
-    //console.log(cBtn);
+// Validator 4
+function validate4() {
+  const input4 = document.getElementById("pledge4");
+  const error4 = document.getElementById("small4");
+  let validator = true;
+  if (input4.value < 200) {
+    input4.style.borderColor = "red";
+    error4.innerText = "Minimum pledge needs to be $200";
+    validator = false;
+  } else {
+    input4.style.borderColor = "";
+    error4.innerText = "";
+    validator = true;
+  }
+  return validator;
+}
 
-    let stockAmount = 1;
+// Form Element 3
+function handleSubmit3(e) {
+  e.preventDefault();
+  if (validate3()) {
+    //console.log("This is true");
+    const stock2 = document.getElementById("stock2");
+    //console.log(stock2);
+    const input3 = document.getElementById("pledge3");
+    //console.log(input3);
+    const cBtn3 = document.getElementById("continueButton3");
+    //console.log(cBtn3);
+
+    let stockAmount = 64;
     //console.log(stockAmount);
 
     stockAmount--;
-    stock3.innerHTML = stockAmount;
+    stock2.innerHTML = stockAmount;
 
-    // OUTPUT
+    // OUTPUT 3
     const output1 = document.getElementById("currentAmount");
     const output2 = document.getElementById("currentBackers");
 
     let currentAmount = 89914;
     console.log(currentAmount);
 
-    const totalAmount = parseInt(currentAmount) + parseInt(input4.value);
-    console.log(input4.value);
-    console.log(totalAmount);
-    output1.innerHTML = "$" + new Intl.NumberFormat().format(totalAmount);
+    const totalAmount3 = parseInt(currentAmount) + parseInt(input3.value);
+    console.log(input3.value);
+    console.log(totalAmount3);
+    output1.innerHTML = "$" + new Intl.NumberFormat().format(totalAmount3);
 
     let currentBackers = 5007;
     console.log(currentBackers);
@@ -113,8 +130,48 @@ function handleSubmit(e) {
   }
 }
 
-// ADDING THE SUBMIT EVENTLISTENER TO THE FORM
-lastForm.addEventListener("submit", handleSubmit);
+// Form Element 4
+function handleSubmit4(e) {
+  e.preventDefault();
+  if (validate4()) {
+    //console.log("This is true");
+    const stock3 = document.getElementById("stock3");
+    //console.log(stock3);
+    const input4 = document.getElementById("pledge4");
+    //console.log(input4);
+    const cBtn4 = document.getElementById("continueButton4");
+    //console.log(cBtn);
+
+    let stockAmount = 1;
+    //console.log(stockAmount);
+
+    stockAmount--;
+    stock3.innerHTML = stockAmount;
+
+    // OUTPUT 4
+    const output1 = document.getElementById("currentAmount");
+    const output2 = document.getElementById("currentBackers");
+
+    let currentAmount = 89914;
+    console.log(currentAmount);
+
+    const totalAmount4 = parseInt(currentAmount) + parseInt(input4.value);
+    console.log(input4.value);
+    console.log(totalAmount4);
+    output1.innerHTML = "$" + new Intl.NumberFormat().format(totalAmount4);
+
+    let currentBackers = 5007;
+    console.log(currentBackers);
+
+    currentBackers++;
+    output2.innerHTML = new Intl.NumberFormat().format(currentBackers);
+    console.log(currentBackers);
+  }
+}
+
+// ADDING THE SUBMIT EVENTLISTENER TO THE FORMS
+form3.addEventListener("submit", handleSubmit3);
+form4.addEventListener("submit", handleSubmit4);
 
 /*
 Selecting all forms: (this does not work)
