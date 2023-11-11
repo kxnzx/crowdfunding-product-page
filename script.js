@@ -2,6 +2,7 @@
 "use strict";
 
 // Form
+const form1 = document.getElementById("form1");
 const form2 = document.getElementById("form2");
 const form3 = document.getElementById("form3");
 const form4 = document.getElementById("form4");
@@ -14,21 +15,6 @@ const continueButtons = document.querySelectorAll("button[type=submit]");
 
 // Display
 const completion_message = document.querySelector(".completion_message");
-
-// Inputs
-const input1 = document.getElementById("pledge1");
-//const input2 = document.getElementById("pledge2");
-//const input3 = document.getElementById("pledge3");
-//const input4 = document.getElementById("pledge4");
-
-// Outputs
-//const output1 = document.getElementById("currentAmount");
-//const output2 = document.getElementById("totalBackers");
-
-// Stock
-//const stock1 = document.getElementById("stock1");
-//const stock2 = document.getElementById("stock2");
-//const stock3 = document.getElementById("stock3");
 
 function display_pledgeList() {
   document.getElementById("pledgeList").style.display = "block";
@@ -57,6 +43,23 @@ radioButtons.forEach((radio) => {
     if (radio.checked) form.style.display = "block";
   });
 });
+
+// Validator 1
+function validate1() {
+  const input1 = document.getElementById("pledge1");
+  const error1 = document.getElementById("small1");
+  let validator = true;
+  if (input1.value < 1) {
+    input1.style.borderColor = "red";
+    error1.innerText = "Minimum pledge needs to be $1";
+    validator = false;
+  } else {
+    input1.style.borderColor = "";
+    error1.innerText = "";
+    validator = true;
+  }
+  return validator;
+}
 
 // Validator 2
 function validate2() {
@@ -107,6 +110,38 @@ function validate4() {
     validator = true;
   }
   return validator;
+}
+
+// Form Element 1
+function handleSubmit1(e) {
+  e.preventDefault();
+  if (validate1()) {
+    //console.log("This is true");
+
+    const input1 = document.getElementById("pledge1");
+    //console.log(input2);
+    const cBtn1 = document.getElementById("continueButton1");
+    //console.log(cBtn1);
+
+    // OUTPUT 1
+    const output1 = document.getElementById("currentAmount");
+    const output2 = document.getElementById("currentBackers");
+
+    let currentAmount = 89914;
+    console.log(currentAmount);
+
+    const totalAmount1 = parseInt(currentAmount) + parseInt(input1.value);
+    console.log(input1.value);
+    console.log(totalAmount1);
+    output1.innerHTML = "$" + new Intl.NumberFormat().format(totalAmount1);
+
+    let currentBackers = 5007;
+    console.log(currentBackers);
+
+    currentBackers++;
+    output2.innerHTML = new Intl.NumberFormat().format(currentBackers);
+    console.log(currentBackers);
+  }
 }
 
 // Form Element 2
@@ -227,6 +262,7 @@ function handleSubmit4(e) {
 }
 
 // ADDING THE SUBMIT EVENTLISTENER TO THE FORMS
+form1.addEventListener("submit", handleSubmit1);
 form2.addEventListener("submit", handleSubmit2);
 form3.addEventListener("submit", handleSubmit3);
 form4.addEventListener("submit", handleSubmit4);
