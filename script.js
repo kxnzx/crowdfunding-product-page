@@ -33,11 +33,6 @@ close_pL.onclick = close_pledgeList;
 
 // Bookmark Button toggle
 bookmark_btn.addEventListener("click", () => {
-  /*
-  console.log("Bookmarkbutton has been clicked");
-  document.getElementById("bookmark_img_off").style.display = "none";
-  document.getElementById("bookmark_img_on").style.display = "block";
-  */
 
     const bookmarkOff = document.getElementById("bookmark_img_off");
     const bookmarkOn = document.getElementById("bookmark_img_on");
@@ -50,7 +45,7 @@ bookmark_btn.addEventListener("click", () => {
    
     else
     {  
-  bookmarkOff.style.display = 'block';
+    bookmarkOff.style.display = 'block';
     bookmarkOn.style.display = 'none';
     }
 
