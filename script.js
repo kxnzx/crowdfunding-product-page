@@ -32,15 +32,61 @@ function close_pledgeList() {
 close_pL.onclick = close_pledgeList;
 
 // Bookmark Button toggle
-
 bookmark_btn.addEventListener("click", () => {
   console.log("Bookmarkbutton has been clicked");
-  bookmark_btn.style.backgroundColor = "#167a70";
-  SVGAElement.scr = images / icon - bookmark - onclick.svg;
+  
+  const screen = window.matchMedia("(min-width: 700px)")
+  if (screen.matches) { // If media query matches
+    bookmark_btn.style.diplay = "block";
+    bookmark_btn.style.backgroundColor = "#167a70";
+  } 
+}
 
-  function changeColor() {
-    SVGAElement.scr = images / icon - bookmark - onclick.svg;
+
+
+
+/*  
+if (true){
+  document.getElementById("bookmark_img_off").style.display = "none";
+  document.getElementById("bookmark_img_on").style.display = "block";
+} 
+*/
+
+
+/*
+ // If it's true that the menu class contains the displayMenu class, do this:
+  if (menu.classList.contains("displayMenu")) {
+    // Execute this block of code if the specified condition is true:
+    menu.classList.remove("displayMenu");
+    closeIcon.style.display = "none";
+    openIcon.style.display = "block";
+    menu.style.display = "none";
   }
+  // If it's false that the menu class contains the showMenu class, do this:
+  else {
+    // Execute this block of code if the specified condition is false:
+    menu.classList.add("displayMenu");
+    closeIcon.style.display = "block";
+    openIcon.style.display = "none";
+    menu.style.display = "block";
+  }
+
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.body.style.backgroundColor = "yellow";
+  } else {
+   document.body.style.backgroundColor = "pink";
+  }
+}
+
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+*/
+
+
 });
 
 // Radio Buttons
