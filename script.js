@@ -34,23 +34,9 @@ close_pL.onclick = close_pledgeList;
 // Bookmark Button toggle
 bookmark_btn.addEventListener("click", () => {
   console.log("Bookmarkbutton has been clicked");
-  
-  const screen = window.matchMedia("(min-width: 700px)")
-  if (screen.matches) { // If media query matches
-    bookmark_btn.style.diplay = "block";
-    bookmark_btn.style.backgroundColor = "#167a70";
-  } 
-}
-
-
-
-
-/*  
-if (true){
   document.getElementById("bookmark_img_off").style.display = "none";
   document.getElementById("bookmark_img_on").style.display = "block";
-} 
-*/
+});
 
 
 /*
@@ -80,14 +66,11 @@ function myFunction(x) {
   }
 }
 
-var x = window.matchMedia("(max-width: 700px)")
+var x = window.matchMedia("(min-width: 700px)")
 myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
 
 */
-
-
-});
 
 // Radio Buttons
 radioButtons.forEach((radio) => {
