@@ -10,6 +10,7 @@ const form4 = document.getElementById("form4");
 // Buttons
 const pL_button = document.getElementById("pledgeList_button");
 const close_pL = document.getElementById("close_pledgeList");
+const bookmark_btn = document.getElementById("bookmark_btn");
 const radioButtons = document.querySelectorAll("input[type=radio]");
 const continueButtons = document.querySelectorAll("button[type=submit]");
 
@@ -29,6 +30,18 @@ function close_pledgeList() {
 
 // Call the function close_pledgeList() when close_pledgeList button is clicked
 close_pL.onclick = close_pledgeList;
+
+// Bookmark Button toggle
+
+bookmark_btn.addEventListener("click", () => {
+  console.log("Bookmarkbutton has been clicked");
+  bookmark_btn.style.backgroundColor = "#167a70";
+  SVGAElement.scr = images / icon - bookmark - onclick.svg;
+
+  function changeColor() {
+    SVGAElement.scr = images / icon - bookmark - onclick.svg;
+  }
+});
 
 // Radio Buttons
 radioButtons.forEach((radio) => {
