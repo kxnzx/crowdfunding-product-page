@@ -36,7 +36,23 @@ bookmark_btn.addEventListener("click", () => {
   console.log("Bookmarkbutton has been clicked");
   document.getElementById("bookmark_img_off").style.display = "none";
   document.getElementById("bookmark_img_on").style.display = "block";
+
 });
+
+// Display text in button when screen resizes 
+const resize = window.matchMedia("(min-width: 700px)");
+
+function addBtnText(resize) {
+  if (resize.matches) { // If media query matches
+    document.getElementById("buttontext").innerText += "Bookmark";
+  } else{
+    document.getElementById("buttontext").innerText += "";
+  }
+}
+
+
+//myFunction(resize); // Call listener function at run time
+resize.addListener(addBtnText); // Attach listener function on state changes
 
 
 /*
