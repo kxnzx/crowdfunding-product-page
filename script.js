@@ -48,8 +48,6 @@ bookmark_btn.addEventListener("click", () => {
     bookmarkOff.style.display = 'block';
     bookmarkOn.style.display = 'none';
     }
-
-
 });
 
 // Display text in button when screen resizes 
