@@ -14,6 +14,34 @@ const bookmark_btn = document.getElementById("bookmark_btn");
 const radioButtons = document.querySelectorAll("input[type=radio]");
 const continueButtons = document.querySelectorAll("button[type=submit]");
 
+// Toggle Menu 
+const menuBtn = document.getElementById("menuBtn");
+
+menuBtn.addEventListener("click", () => {
+
+const menu = document.getElementById("menuList");
+const open_menu = document.getElementById("open_menu");
+const close_menu = document.getElementById("close_menu");
+
+  // If it's true that the menu class contains the displayMenu class, do this:
+  if (menu.classList.contains("displayMenu")) {
+    // Execute this block of code if the specified condition is true:
+    menu.classList.remove("displayMenu");
+    close_menu.style.display = "none";
+    open_menu.style.display = "block";
+    menu.style.display = "none";
+  }
+  // If it's false that the menu class contains the showMenu class, do this:
+  else {
+    // Execute this block of code if the specified condition is false:
+    menu.classList.add("displayMenu");
+    close_menu.style.display = "block";
+    open_menu.style.display = "none";
+    menu.style.display = "block";
+  }
+})
+
+
 // Display Completion Message
 const completion_message = document.querySelector(".completion_message");
 

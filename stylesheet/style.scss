@@ -18,11 +18,21 @@ section {
   height: 100px;
 }
 
-#pledgeList {
+#close_menu {
+  display: none; // Toggle this on and off in JS
+}
+
+#menuList {
   display: none;
 }
 
+.displayMenu {
+  display: block; // Toggle this on and off in JS
+}
 
+#pledgeList {
+  display: none;
+}
 
 
 #bookmark_img_on {

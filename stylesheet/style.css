@@ -18,6 +18,18 @@ section {
   height: 100px;
 }
 
+#close_menu {
+  display: none;
+}
+
+#menuList {
+  display: none;
+}
+
+.displayMenu {
+  display: block;
+}
+
 #pledgeList {
   display: none;
 }
