@@ -73,7 +73,6 @@ bookmark_btn.addEventListener("click", () => {
     bookmarkOn.style.display = 'none';
     document.getElementById("buttontext").innerHTML = btnTxt.replace("Bookmarked", "Bookmark");
     }
-
 });
 
 
