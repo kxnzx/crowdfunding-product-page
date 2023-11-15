@@ -31,25 +31,6 @@ function close_pledgeList() {
 // Call the function close_pledgeList() when close_pledgeList button is clicked
 close_pL.onclick = close_pledgeList;
 
-// Bookmark Button toggle
-bookmark_btn.addEventListener("click", () => {
-
-    const bookmarkOff = document.getElementById("bookmark_img_off");
-    const bookmarkOn = document.getElementById("bookmark_img_on");
- 
-    if(bookmarkOff.style.display === 'block')
-    {
-    bookmarkOff.style.display = 'none';
-    bookmarkOn.style.display = 'block';
-    }
-   
-    else
-    {  
-    bookmarkOff.style.display = 'block';
-    bookmarkOn.style.display = 'none';
-    }
-});
-
 // Display text in button when screen resizes 
 const resize = window.matchMedia("(min-width: 700px)");
 
@@ -61,43 +42,47 @@ function addBtnText(resize) {
   }
 }
 
+resize.addListener(addBtnText); 
 
-//myFunction(resize); // Call listener function at run time
-resize.addListener(addBtnText); // Attach listener function on state changes
+// Remove text in button when screen resizes 
+const resizeMobile = window.matchMedia("(max-width: 700px)");
+console.log(resizeMobile);
 
-
-/*
- // If it's true that the menu class contains the displayMenu class, do this:
-  if (menu.classList.contains("displayMenu")) {
-    // Execute this block of code if the specified condition is true:
-    menu.classList.remove("displayMenu");
-    closeIcon.style.display = "none";
-    openIcon.style.display = "block";
-    menu.style.display = "none";
-  }
-  // If it's false that the menu class contains the showMenu class, do this:
-  else {
-    // Execute this block of code if the specified condition is false:
-    menu.classList.add("displayMenu");
-    closeIcon.style.display = "block";
-    openIcon.style.display = "none";
-    menu.style.display = "block";
-  }
-
-
-function myFunction(x) {
-  if (x.matches) { // If media query matches
-    document.body.style.backgroundColor = "yellow";
-  } else {
-   document.body.style.backgroundColor = "pink";
-  }
+function removeBtnText(resizeMobile) {
+  if (resizeMobile.matches) { // If media query matches
+    location.href = location.href;
+  } 
 }
 
-var x = window.matchMedia("(min-width: 700px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+resizeMobile.addListener(removeBtnText);
 
-*/
+// Bookmark Button toggle
+bookmark_btn.addEventListener("click", () => {
+
+  const bookmarkOff = document.getElementById("bookmark_img_off");
+  const bookmarkOn = document.getElementById("bookmark_img_on");
+  const btnTxt = document.getElementById("buttontext");
+ 
+    if(bookmarkOff.style.display !== 'none' && window.matchMedia("(min-width: 700px)"))
+    {
+    bookmarkOff.style.display = 'none';
+    bookmarkOn.style.display = 'block';
+    document.getElementById("buttontext").innerText += "";
+    (btnTxt).innerText === "Bookmarked";
+    console.log(btnTxt);
+    }
+   
+    else
+    {  
+    bookmarkOff.style.display = 'block';
+    bookmarkOn.style.display = 'none';
+    }
+
+    // (btnTxt).innerText == "Bookmark"
+    // window.matchMedia("(min-width: 700px)")
+
+});
+
 
 // Radio Buttons
 radioButtons.forEach((radio) => {
@@ -344,142 +329,3 @@ form2.addEventListener("submit", handleSubmit2);
 form3.addEventListener("submit", handleSubmit3);
 form4.addEventListener("submit", handleSubmit4);
 
-/*
-Selecting all forms: (this does not work)
-
-forms.addEventListener("submit", handleSubmit);
-console.log(forms);
-Uncaught TypeError: forms.addEventListener is not a function
-*/
-
-/*
-function validate() {
-  const inputs = document.querySelectorAll("input");
-  let validator = true;
-  inputs.forEach((i) => {
-    const parent = i.parentElement;
-    if (!i.value) {
-      i.style.borderColor = "red";
-      parent.querySelector("label").style.color = "red";
-      parent.querySelector("small").innerText = "This field is required";
-      validator = false;
-    } else if (monthInput.value > 12) {
-      monthInput.style.borderColor = "red";
-      parent.querySelector("label").style.color = "red";
-      monthInput.parentElement.querySelector("small").innerText =
-        "Must be a valid month";
-      validator = false;
-    } else if (dayInput.value > 31) {
-      dayInput.style.borderColor = "red";
-      parent.querySelector("label").style.color = "red";
-      dayInput.parentElement.querySelector("small").innerText =
-        "Must be a valid day";
-      validator = false;
-    } else {
-      i.style.borderColor = "";
-      parent.querySelector("small").innerText = "";
-      validator = true;
-    }
-  });
-  return validator;
-}
-
-
-function handleSubmit(e) {
-  e.preventDefault();
-  if (validate()) {
-    if (dayInput.value > day) {
-      day = day + months[month - 1];
-      month = month - 1;
-    }
-    if (monthInput.value > month) {
-      month = month + 12;
-      year = year - 1;
-    }
-
-    const d = day - dayInput.value;
-    const m = month - monthInput.value;
-    const y = year - yearInput.value;
-
-    dayOutput.innerHTML = d;
-    monthOutput.innerHTML = m;
-    yearOutput.innerHTML = y;
-  }
-}
-
-// Continue Buttons
-continueButtons.forEach((continueButton) => {
-  continueButton.addEventListener("click", () => {
-    console.log("Continue Button is clicked");
-    completion_message.style.display = "block";
-  });
-});
-*/
-
-/*
-// Radio Buttons
-radioButtons.forEach((radio) => {
-  //console.log(radioButtons);
-  radio.addEventListener("click", () => {
-    if (radio.checked) {
-      console.log("radio is clicked");
-      const form = radio.parentElement.querySelector("form");
-      form.style.display = "block";
-    } else {
-      console.log("radio is unclicked");
-      form.style.display = "none";
-    }
-  });
-});
-*/
-
-/*
-function handleRadioClick() {
-  //console.log(handleRadioClick);
-  if (document.getElementByTagName("input").checked) {
-    form.style.display = "block";
-  } else {
-    property.radio.checked = false;
-  }
-}
-
-
-('click', () => {
-		document.querySelector('.mobile-btn__close-icon').classList.remove('opened')
-		document.querySelector('.mobile-btn__open-icon').classList.remove('closed')
-		document.querySelector('.mobile-btn__open-icon').classList.add('opened')
-		mobileLinksContainer.classList.remove('opened')
-		bodyHtml.classList.remove('overflow')
-	})
-})
-*/
-
-/*
-
-const box = document.getElementById("box");
-let radioBtns = document.getElementsByTagName("input");
-
-function handleRadioClick() {
-  if (document.getElementByTagName("show").checked) {
-    box.style.display = "block";
-  } else {
-    property.radio.checked = false;
-  }
-}
-
-const radioButtons = document.querySelectorAll('input[name="example"]');
-radioButtons.forEach((radio) => {
-  radio.addEventListener("click", handleRadioClick);
-});
-*/
-
-/*
-let radios = document.getElementsByTagName("input");
-for (i = 0; i < radios.length; i++) {
-  radios[i].onclick = function (e) {
-    if (e.ctrlKey) {
-      this.checked = false;
-    }
-  };
-}
-*/
