@@ -14,9 +14,10 @@ const bookmark_btn = document.getElementById("bookmark_btn");
 const radioButtons = document.querySelectorAll("input[type=radio]");
 const continueButtons = document.querySelectorAll("button[type=submit]");
 
-// Display
+// Display Completion Message
 const completion_message = document.querySelector(".completion_message");
 
+// Display list with Radio Buttons
 function display_pledgeList() {
   document.getElementById("pledgeList").style.display = "block";
 }
@@ -24,6 +25,7 @@ function display_pledgeList() {
 // Call the function display_pledgeList() when pledgeList_button is clicked
 pL_button.onclick = display_pledgeList;
 
+// Close list with Radio Buttons
 function close_pledgeList() {
   document.getElementById("pledgeList").style.display = "none";
 }
