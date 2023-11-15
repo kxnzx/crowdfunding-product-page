@@ -37,8 +37,6 @@ const resize = window.matchMedia("(min-width: 700px)");
 function addBtnText(resize) {
   if (resize.matches) { // If media query matches
     document.getElementById("buttontext").innerText += "Bookmark";
-  } else{
-    document.getElementById("buttontext").innerText += "";
   }
 }
 
@@ -61,25 +59,20 @@ bookmark_btn.addEventListener("click", () => {
 
   const bookmarkOff = document.getElementById("bookmark_img_off");
   const bookmarkOn = document.getElementById("bookmark_img_on");
-  const btnTxt = document.getElementById("buttontext");
+  let btnTxt = document.getElementById("buttontext").innerHTML;
  
-    if(bookmarkOff.style.display !== 'none' && window.matchMedia("(min-width: 700px)"))
+    if(bookmarkOff.style.display !== 'none')
     {
     bookmarkOff.style.display = 'none';
     bookmarkOn.style.display = 'block';
-    document.getElementById("buttontext").innerText += "";
-    (btnTxt).innerText === "Bookmarked";
+    document.getElementById("buttontext").innerHTML = btnTxt.replace("Bookmark", "Bookmarked");
     console.log(btnTxt);
-    }
-   
-    else
+    } else
     {  
     bookmarkOff.style.display = 'block';
     bookmarkOn.style.display = 'none';
+    document.getElementById("buttontext").innerHTML = btnTxt.replace("Bookmarked", "Bookmark");
     }
-
-    // (btnTxt).innerText == "Bookmark"
-    // window.matchMedia("(min-width: 700px)")
 
 });
 
