@@ -351,30 +351,11 @@ form3.addEventListener("submit", handleSubmit3);
 form4.addEventListener("submit", handleSubmit4);
 
 // Select Reward Buttons 
-const selectBtn1 = document.getElementById("selectBtn1");
-const selectBtn2 = document.getElementById("selectBtn2");
-const selectBtn3 = document.getElementById("selectBtn3");
+const selectBtns = document.querySelectorAll(".selectBtn");
+//console.log(selectBtns);
 
-/*
-
-const section1 = document.getElementById("section1");
-
-// Display list with Radio Buttons
-function display_section1() {
-  document.getElementById("section1").style.display = "block";
-}
-
-selectBtn1.onclick = display_section1;
-
-
-// Display list with Radio Buttons
-function display_pledgeList() {
-  document.getElementById("pledgeList").style.display = "block";
-}
-
-// Call the function display_pledgeList() when pledgeList_button is clicked
-pL_button.onclick = display_pledgeList;
-
-
-
-*/
+// Display Pledgelist 
+selectBtns.forEach((btn)=>{
+  btn.onclick = display_pledgeList;
+});
+  
