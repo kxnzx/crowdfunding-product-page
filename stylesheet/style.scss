@@ -17,7 +17,7 @@ $fw_regular: 400;
 $fw_medium: 500;
 $fw_bold: 700;
 // font-size
-$fs_bodyCopy: 1.6rem;
+$fs_bodyCopy: 1.5rem;
 // Breakpoints
 $mobile: 640px; 
 $tablet: 768px;
@@ -162,6 +162,7 @@ section {
  .flexbox{
   display: flex;
   justify-content: space-between;
+  height: 6.5rem;
   #pledgeList_button{
     padding: 1.5rem 5rem;
     border-radius: 30px;
