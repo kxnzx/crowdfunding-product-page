@@ -67,6 +67,7 @@ p {
 // STYLES
 body{
   font-family: $ff;
+  background-color: $light_gray;
 }
 
 header {
@@ -119,8 +120,29 @@ button{
 }
 }
 
+.container{
+ display: grid;
+ place-items: center;
+}
+
+main {
+  position: absolute;
+  top: 24rem;
+  width: 32.5rem;
+}
+
 section {
-  border: solid black 2px;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.head{
+  .mastercraft_logo{
+    position: absolute;
+    top: -2.5rem;
+    right: 13.5rem;
+  }
 }
 
 #box {
@@ -160,4 +182,9 @@ form {
 
 .display_completion_message {
   display: block;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
 }
