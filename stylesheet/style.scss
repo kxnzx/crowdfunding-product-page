@@ -55,6 +55,12 @@ ol {
 
 button {
   cursor: pointer;
+  background-color: $moderate_cyan;
+  border: none;
+  border-radius: 25px;
+  padding: 1.5rem 3rem;
+  color: white;
+  font-weight: $fw_medium;
 }
 
 a {
@@ -63,10 +69,12 @@ a {
 
 p {
   line-height: 1.6;
+  color: $dark_gray;
 }
 // STYLES
 body{
   font-family: $ff;
+  font-size: $fs_bodyCopy;
   background-color: $light_gray;
 }
 
@@ -123,6 +131,7 @@ button{
 .container{
  display: grid;
  place-items: center;
+ height: 100vh;
 }
 
 main {
@@ -147,6 +156,22 @@ section {
     top: -2.5rem;
     right: 13.5rem;
   }
+  h1 {
+    font-size: 2.15rem;
+  }
+ .flexbox{
+  display: flex;
+  justify-content: space-between;
+  #pledgeList_button{
+    padding: 1.5rem 5rem;
+    border-radius: 30px;
+    font-size: 1.5rem;
+  }
+  #bookmark_btn {
+    background: none;
+    padding: 0;
+  }
+ }
 }
 
 #box {
@@ -189,6 +214,13 @@ form {
 }
 
 footer{
-  position: absolute;
   bottom: 0;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: $light_gray;
+  a{
+    color: $dark_cyan;
+  }
 }

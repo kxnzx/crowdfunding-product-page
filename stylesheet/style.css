@@ -30,6 +30,12 @@ ol {
 
 button {
   cursor: pointer;
+  background-color: hsl(176deg, 50%, 47%);
+  border: none;
+  border-radius: 25px;
+  padding: 1.5rem 3rem;
+  color: white;
+  font-weight: 500;
 }
 
 a {
@@ -38,10 +44,12 @@ a {
 
 p {
   line-height: 1.6;
+  color: hsl(0deg, 0%, 48%);
 }
 
 body {
   font-family: "Commissioner", sans-serif;
+  font-size: 1.6rem;
   background-color: #ededed;
 }
 
@@ -96,6 +104,7 @@ nav button {
 .container {
   display: grid;
   place-items: center;
+  height: 100vh;
 }
 
 main {
@@ -120,6 +129,22 @@ section:not(:first-child) {
   position: absolute;
   top: -2.5rem;
   right: 13.5rem;
+}
+.head h1 {
+  font-size: 2.15rem;
+}
+.head .flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+.head .flexbox #pledgeList_button {
+  padding: 1.5rem 5rem;
+  border-radius: 30px;
+  font-size: 1.5rem;
+}
+.head .flexbox #bookmark_btn {
+  background: none;
+  padding: 0;
 }
 
 #box {
@@ -159,6 +184,13 @@ form {
 }
 
 footer {
-  position: absolute;
   bottom: 0;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: #ededed;
+}
+footer a {
+  color: hsl(176deg, 72%, 28%);
 }/*# sourceMappingURL=style.css.map */
