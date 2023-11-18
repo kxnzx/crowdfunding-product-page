@@ -135,9 +135,13 @@ section {
   background-color: white;
   border-radius: 8px;
   text-align: center;
+  &:not(:first-child){
+    margin-top: 2.5rem;
+}
 }
 
 .head{
+  padding: 5.5rem 2rem 2.5rem;
   .mastercraft_logo{
     position: absolute;
     top: -2.5rem;
