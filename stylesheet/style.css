@@ -139,29 +139,61 @@ section:not(:first-child) {
 }
 
 .head {
-  padding: 5.5rem 2rem 2.5rem;
+  padding: 5.5rem 2rem 3.5rem;
 }
 .head .mastercraft_logo {
   position: absolute;
-  top: -2.5rem;
+  top: -3rem;
   right: 13.5rem;
 }
 .head h1 {
   font-size: 2.15rem;
 }
+.head p {
+  margin-top: 2.5rem;
+}
 .head .flexbox {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 6.5rem;
+  margin-top: 2.5rem;
 }
 .head .flexbox #pledgeList_button {
-  padding: 1.5rem 5rem;
+  padding: 0.25rem 5rem;
   border-radius: 30px;
   font-size: 1.5rem;
+  height: 5.5rem;
 }
 .head .flexbox #bookmark_btn {
   background: none;
   padding: 0;
+}
+
+.status {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+.status ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  color: hsl(0deg, 0%, 48%);
+  font-weight: 500;
+}
+.status ul li:not(:first-child) {
+  margin-top: 3rem;
+}
+.status ul li span {
+  font-weight: 700;
+  font-size: 3rem;
+  color: hsl(0deg, 0%, 0%);
+}
+.status ul hr {
+  color: #ededed;
+  border-top: 0.5px;
+  width: 8rem;
+  margin: 2.5rem auto;
 }
 
 #box {
