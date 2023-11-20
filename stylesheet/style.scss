@@ -222,6 +222,47 @@ section {
   }
 }
 
+.content{
+  text-align: left;
+  padding: 4rem 2rem;
+  h2{
+    font-size: 2rem;
+  }
+  p{
+    margin-top: 2.5rem;
+  }
+.reward {
+  border: solid $light_gray 2px;
+  text-align: left;
+  padding: 2.5rem;
+  h3{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+   span{
+    color: $dark_cyan;
+   }
+  }
+  .row{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 16rem;
+    span{
+      font-weight: $fw_bold;
+      font-size: 3rem;
+      span{
+        font-weight: $fw_regular;
+        font-size: $fs_bodyCopy;
+        color: $dark_gray;
+      }
+    }
+  }
+}
+}
+
 #box {
   display: none;
   background-color: blueviolet;

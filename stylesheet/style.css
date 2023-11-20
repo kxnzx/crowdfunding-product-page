@@ -196,6 +196,47 @@ section:not(:first-child) {
   margin: 2.5rem auto;
 }
 
+.content {
+  text-align: left;
+  padding: 4rem 2rem;
+}
+.content h2 {
+  font-size: 2rem;
+}
+.content p {
+  margin-top: 2.5rem;
+}
+.content .reward {
+  border: solid #ededed 2px;
+  text-align: left;
+  padding: 2.5rem;
+}
+.content .reward h3 {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.content .reward h3 span {
+  color: hsl(176deg, 72%, 28%);
+}
+.content .reward .row {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 16rem;
+}
+.content .reward .row span {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.content .reward .row span span {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: hsl(0deg, 0%, 48%);
+}
+
 #box {
   display: none;
   background-color: blueviolet;
