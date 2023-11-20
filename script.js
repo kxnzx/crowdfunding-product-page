@@ -22,22 +22,25 @@ menuBtn.addEventListener("click", () => {
 const menu = document.getElementById("menuList");
 const open_menu = document.getElementById("open_menu");
 const close_menu = document.getElementById("close_menu");
+const overlay = document.getElementById("overlay");
 
-  // If it's true that the menu class contains the displayMenu class, do this:
+  // If it's true than do this:
   if (menu.classList.contains("displayMenu")) {
     // Execute this block of code if the specified condition is true:
     menu.classList.remove("displayMenu");
     close_menu.style.display = "none";
     open_menu.style.display = "block";
     menu.style.display = "none";
+    overlay.style.display = "none";
   }
-  // If it's false that the menu class contains the showMenu class, do this:
+  // If it's false than do this:
   else {
     // Execute this block of code if the specified condition is false:
     menu.classList.add("displayMenu");
     close_menu.style.display = "block";
     open_menu.style.display = "none";
     menu.style.display = "block";
+    overlay.style.display = "block";
   }
 })
 

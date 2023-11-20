@@ -53,8 +53,17 @@ body {
   background-color: #ededed;
 }
 
+#overlay {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+  position: absolute;
+  inset: 0;
+  z-index: 98;
+  height: 200vh;
+  display: none;
+}
+
 header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../images/image-hero-mobile.jpg);
+  background-image: url(../images/image-hero-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 30rem;
@@ -64,6 +73,11 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+}
+nav .logo {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 nav ul {
   display: none;
@@ -75,6 +89,7 @@ nav ul {
   font-size: 1.8rem;
   font-weight: 500;
   background-color: white;
+  z-index: 99;
 }
 nav ul hr {
   color: #ededed;
@@ -99,6 +114,7 @@ nav ul li:not(:first-child) {
 nav button {
   background: none;
   border: none;
+  z-index: 99;
 }
 
 .container {
