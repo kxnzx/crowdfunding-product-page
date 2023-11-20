@@ -250,15 +250,21 @@ section {
     flex-direction: column;
     gap: 2rem;
     width: 16rem;
-    span{
-      font-weight: $fw_bold;
-      font-size: 3rem;
-      span{
-        font-weight: $fw_regular;
-        font-size: $fs_bodyCopy;
-        color: $dark_gray;
+      .spanBox{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .span1{
+          font-weight: $fw_bold;
+          font-size: 3rem;
+        }
+        .span2{
+          font-weight: $fw_regular;
+          font-size: $fs_bodyCopy;
+          color: $dark_gray;
+        }
       }
-    }
+    
   }
 }
 }
