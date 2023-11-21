@@ -11,6 +11,7 @@ const form4 = document.getElementById("form4");
 const pL_button = document.getElementById("pledgeList_button");
 const close_pL = document.getElementById("close_pledgeList");
 const bookmark_btn = document.getElementById("bookmark_btn");
+// RadioButtons don't function anymore!
 const radioButtons = document.querySelectorAll("input[type=radio]");
 //const radioButtons = document.querySelectorAll(".pledgeList > .modal > .gridBox > input[type=radio]");
 const continueButtons = document.querySelectorAll("button[type=submit]");
