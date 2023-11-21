@@ -240,26 +240,57 @@ section:not(:first-child) {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
 }
+@media screen and (min-width: 768px) {
+  .status {
+    padding-right: 5rem;
+    padding-left: 5rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .status ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5.5rem;
+  }
+}
 .status ul li {
   display: flex;
   flex-direction: column;
-  gap: 0.95rem;
-  color: hsl(0deg, 0%, 48%);
-  font-weight: 500;
+  gap: 0.3rem;
 }
 .status ul li:not(:first-child) {
   margin-top: 3rem;
 }
-.status ul li span {
+@media screen and (min-width: 768px) {
+  .status ul li:not(:first-child) {
+    margin-top: 0;
+  }
+}
+.status ul li .span1 {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: hsl(0deg, 0%, 0%);
+}
+.status ul li .span2 {
+  color: hsl(0deg, 0%, 48%);
+  font-weight: 500;
 }
 .status ul hr {
   color: #ededed;
   border-top: 0.5px;
   width: 8rem;
   margin: 2.5rem auto;
+}
+@media screen and (min-width: 768px) {
+  .status ul hr {
+    height: 9rem;
+    left: 50%;
+    margin: 0;
+    width: 0;
+    right: 0;
+  }
 }
 
 .content {

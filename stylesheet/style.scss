@@ -245,20 +245,36 @@ section {
 .status {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+  @media screen and (min-width: $tablet){
+    padding-right: 5rem;
+    padding-left: 5rem;
+    text-align: left;
+  }
   ul{
+    @media screen and (min-width: $tablet){
+      display: flex;
+      justify-content:flex-start;
+      align-items: center;
+      gap: 5.5rem;
+    }
     li{
       display: flex;
       flex-direction: column;
-      gap: 0.95rem;
-      color: $dark_gray;
-      font-weight: $fw_medium;
+      gap: 0.3rem;
       &:not(:first-child){
         margin-top: 3rem;
+        @media screen and (min-width: $tablet){
+          margin-top: 0;
+        }
     }
-    span{
+    .span1 {
       font-weight: $fw_bold;
-      font-size: 3rem;
+      font-size: 3.5rem;
       color: $black;
+    }
+    .span2{
+      color: $dark_gray;
+      font-weight: $fw_medium;
     }
     }
     hr {
@@ -266,6 +282,13 @@ section {
       border-top: 0.5px;
       width: 8rem;
       margin: 2.5rem auto;
+      @media screen and (min-width: $tablet){
+      height: 9rem;
+      left: 50%;
+      margin: 0;
+      width: 0;
+      right: 0;
+      }
     }
   }
 }
