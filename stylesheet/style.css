@@ -207,11 +207,6 @@ section:not(:first-child) {
   height: 6.5rem;
   margin-top: 2.5rem;
 }
-@media screen and (min-width: 768px) {
-  .head .flexbox {
-    justify-content: left;
-  }
-}
 .head .flexbox #pledgeList_button {
   padding: 0.25rem 5rem;
   border-radius: 30px;
@@ -222,9 +217,23 @@ section:not(:first-child) {
   background: none;
   padding: 0;
 }
-.head .flexbox #buttontext {
-  background-color: #ededed;
-  padding: 1rem;
+@media screen and (min-width: 768px) {
+  .head .flexbox #bookmark_btn {
+    position: absolute;
+    right: 17rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .head .flexbox #buttontext {
+    background-color: #ededed;
+    width: 20rem;
+    padding: 1.8rem 5rem;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    text-align: right;
+    color: hsl(0deg, 0%, 48%);
+    font-weight: 700;
+  }
 }
 
 .status {

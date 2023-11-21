@@ -213,9 +213,6 @@ section {
   align-items: center;
   height: 6.5rem;
   margin-top: 2.5rem;
-  @media screen and (min-width: $tablet){
-    justify-content: left;
-  }
   #pledgeList_button{
     padding: 0.25rem 5rem;
     border-radius: 30px;
@@ -225,10 +222,22 @@ section {
   #bookmark_btn {
     background: none;
     padding: 0;
+    @media screen and (min-width: $tablet){
+      position: absolute;
+      right: 17rem;
+    }
   }
   #buttontext{
-    background-color: $light_gray;
-    padding: 1rem;
+    @media screen and (min-width: $tablet){
+      background-color: $light_gray;
+      width: 20rem;
+      padding: 1.8rem 5rem;
+      border-radius: 30px;
+      font-size: 1.5rem;
+      text-align: right;
+      color: $dark_gray;
+      font-weight: $fw_bold;
+    }
   }
  }
 }
