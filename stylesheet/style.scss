@@ -83,7 +83,7 @@ body{
   position: absolute;
   inset: 0;
   z-index: 98;
-  height: 200vh;
+  height: 400vh;
   display: none;
 }
 
@@ -241,7 +241,8 @@ section {
     flex-direction: column;
     gap: 0.5rem;
    span{
-    color: $dark_cyan;
+    color: $moderate_cyan;
+    font-weight: $fw_medium;
    }
   }
   .row{
@@ -287,7 +288,68 @@ section {
 }
 
 #pledgeList {
-  display: none;
+  //display: none;
+  position: absolute;
+  max-width: 32.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 10rem;
+  text-align: left;
+  z-index: 99;
+  padding: 3.5rem 2.5rem;
+  font-size: 1.4rem;
+  .flexBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //width: 100%;
+    h2{
+      font-size: 2rem;
+    }
+    button{
+      background: none;
+      padding: 0;
+    }
+  }
+  p{
+    margin-top: 2.5rem;
+  }
+  .modal{
+    text-align: left;
+    border: solid $light_gray 2px;
+    padding: 3rem 2rem;
+    .gridBox{
+    display: grid;
+    grid-template-columns: 3rem auto;
+    grid-template-rows:  1fr;
+    column-gap: 0.5rem;
+    input{
+      grid-column : 1 / 2;
+      grid-row: 1/4;
+      width: 2.2rem;
+    }
+    .modalH3{
+      grid-column: 2/3;
+      grid-row: 1/4;
+    }
+    h3{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      font-size: 1.4rem;
+    }
+    p{
+      margin: 0;
+      grid-column : 2 / 3;
+      grid-row: 2/3;
+      color: $moderate_cyan;
+      font-weight: $fw_medium;
+      font-size: 1.4rem;
+      
+    }
+    }
+  }
 }
 
 

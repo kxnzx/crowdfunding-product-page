@@ -14,6 +14,9 @@ const bookmark_btn = document.getElementById("bookmark_btn");
 const radioButtons = document.querySelectorAll("input[type=radio]");
 const continueButtons = document.querySelectorAll("button[type=submit]");
 
+// Overlay
+const overlay = document.getElementById("overlay");
+
 // Toggle Menu 
 const menuBtn = document.getElementById("menuBtn");
 
@@ -50,6 +53,7 @@ const completion_message = document.querySelector(".completion_message");
 // Display list with Radio Buttons
 function display_pledgeList() {
   document.getElementById("pledgeList").style.display = "block";
+  overlay.style.display = "block";
 }
 
 // Call the function display_pledgeList() when pledgeList_button is clicked
@@ -58,6 +62,7 @@ pL_button.onclick = display_pledgeList;
 // Close list with Radio Buttons
 function close_pledgeList() {
   document.getElementById("pledgeList").style.display = "none";
+  overlay.style.display = "none";
 }
 
 // Call the function close_pledgeList() when close_pledgeList button is clicked
