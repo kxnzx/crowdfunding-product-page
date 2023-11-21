@@ -288,7 +288,7 @@ section {
 }
 
 #pledgeList {
-  //display: none;
+  display: none;
   position: absolute;
   max-width: 32.5rem;
   margin-left: auto;
@@ -304,7 +304,6 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //width: 100%;
     h2{
       font-size: 2rem;
     }
@@ -329,6 +328,7 @@ section {
       grid-column : 1 / 2;
       grid-row: 1/4;
       width: 2.2rem;
+      z-index: 0;
     }
     .modalH3{
       grid-column: 2/3;
@@ -349,6 +349,15 @@ section {
       
     }
     }
+  .modalStock{
+    font-weight: $fw_medium;
+    span{
+      color: $black;
+      font-weight: $fw_bold;
+      font-size: 1.8rem;
+      margin-right: 1rem;
+    }
+  }
   }
 }
 

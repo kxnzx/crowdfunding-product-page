@@ -260,6 +260,7 @@ section:not(:first-child) {
 }
 
 #pledgeList {
+  display: none;
   position: absolute;
   max-width: 32.5rem;
   margin-left: auto;
@@ -303,6 +304,7 @@ section:not(:first-child) {
   grid-column: 1/2;
   grid-row: 1/4;
   width: 2.2rem;
+  z-index: 0;
 }
 #pledgeList .modal .gridBox .modalH3 {
   grid-column: 2/3;
@@ -320,6 +322,15 @@ section:not(:first-child) {
   color: hsl(176deg, 50%, 47%);
   font-weight: 500;
   font-size: 1.4rem;
+}
+#pledgeList .modal .modalStock {
+  font-weight: 500;
+}
+#pledgeList .modal .modalStock span {
+  color: hsl(0deg, 0%, 0%);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-right: 1rem;
 }
 
 #bookmark_img_on {
