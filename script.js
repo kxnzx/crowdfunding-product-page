@@ -116,6 +116,10 @@ bookmark_btn.addEventListener("click", () => {
 
 
 // Radio Buttons
+/*
+By clicking the option button, first it goes through all the buttons and deactivates each form, 
+then activates only the form of the button you clicked.
+*/
 radioButtons.forEach((radio) => {
   radio.addEventListener("click", () => {
     const form = radio.parentElement.querySelector("form");
