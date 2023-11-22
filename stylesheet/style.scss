@@ -117,7 +117,7 @@ nav{
     z-index: 99;
     @media screen and (min-width: $xl_tablet){
       display: flex;
-      position: fixed;
+      position: sticky;
       background: none;
       color: white;
       max-width: 26.5rem;

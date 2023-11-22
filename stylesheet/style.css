@@ -99,7 +99,8 @@ nav ul {
 @media screen and (min-width: 960px) {
   nav ul {
     display: flex;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     background: none;
     color: white;
     max-width: 26.5rem;
