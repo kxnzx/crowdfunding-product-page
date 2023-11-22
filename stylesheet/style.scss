@@ -74,7 +74,7 @@ p {
 // STYLES
 body{
   font-family: $ff;
-  font-size: $fs_bodyCopy;
+  font-size: 1.4rem;
   background-color: $light_gray;
 }
 
@@ -298,7 +298,7 @@ section {
 
 .content{
   text-align: left;
-  padding: 4rem 2rem;
+  padding: 4rem 2.25rem;
   h2{
     font-size: 2rem;
   }
@@ -309,6 +309,9 @@ section {
   border: solid $light_gray 2px;
   text-align: left;
   padding: 2.5rem;
+  &:hover{
+    border: solid $moderate_cyan 2px;
+  }
   h3{
     font-size: 1.5rem;
     display: flex;
@@ -400,6 +403,9 @@ section {
     text-align: left;
     border: solid $light_gray 2px;
     padding: 3rem 2rem;
+    &:hover{
+      border: solid $moderate_cyan 2px;
+    }
     .gridBox{
     display: grid;
     grid-template-columns: 3rem auto;
