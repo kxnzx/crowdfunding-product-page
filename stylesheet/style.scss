@@ -174,7 +174,7 @@ main {
   position: absolute;
   top: 24rem;
   max-width: 32.5rem;
-  @media screen and (min-width: $tablet){
+  @media screen and (min-width: $mobile){
     max-width: 73.5rem;
   }
 }

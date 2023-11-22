@@ -161,7 +161,7 @@ main {
   top: 24rem;
   max-width: 32.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   main {
     max-width: 73.5rem;
   }
