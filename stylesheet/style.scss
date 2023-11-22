@@ -218,6 +218,9 @@ section {
     border-radius: 30px;
     font-size: 1.5rem;
     height: 5.5rem;
+    &:hover{
+      background-color: $dark_cyan;
+    }
   }
   #bookmark_btn {
     background: none;
@@ -341,7 +344,9 @@ section {
           color: $dark_gray;
         }
       }
-    
+      button:hover{
+        background-color: $dark_cyan;
+      }
   }
 }
 }

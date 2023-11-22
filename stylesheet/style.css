@@ -214,6 +214,9 @@ section:not(:first-child) {
   font-size: 1.5rem;
   height: 5.5rem;
 }
+.head .flexbox #pledgeList_button:hover {
+  background-color: hsl(176deg, 72%, 28%);
+}
 .head .flexbox #bookmark_btn {
   background: none;
   padding: 0;
@@ -346,6 +349,9 @@ section:not(:first-child) {
   font-weight: 400;
   font-size: 1.5rem;
   color: hsl(0deg, 0%, 48%);
+}
+.content .reward .row button:hover {
+  background-color: hsl(176deg, 72%, 28%);
 }
 
 #box {
