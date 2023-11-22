@@ -13,7 +13,10 @@ const close_pL = document.getElementById("close_pledgeList");
 const bookmark_btn = document.getElementById("bookmark_btn");
 // RadioButtons don't function anymore!
 const radioButtons = document.querySelectorAll("input[type=radio]");
+console.log(radioButtons);
+// I tried this, but this does not work either:
 //const radioButtons = document.querySelectorAll(".pledgeList > .modal > .gridBox > input[type=radio]");
+//console.log(radioButtons);
 const continueButtons = document.querySelectorAll("button[type=submit]");
 
 // Overlay
