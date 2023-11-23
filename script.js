@@ -382,4 +382,12 @@ const selectBtns = document.querySelectorAll(".selectBtn");
 selectBtns.forEach((btn)=>{
   btn.onclick = display_pledgeList;
 });
+
+// Remove display completion message & overlay 
+const completion_btn = document.getElementById("completion_btn");
+
+completion_btn.addEventListener("click", () => {
+  completion_message.classList.remove("display_completion_message");
+  overlay.style.display = "none";
+});
   
