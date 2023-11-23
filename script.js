@@ -126,12 +126,12 @@ then activates only the form of the button you clicked.
 radioButtons.forEach((radio) => {
   radio.addEventListener("click", () => {
     //console.log(radio.parentElement); // parent of radio is gridBox
-    const form = radio.parentElement.querySelector("form");
+    const form = radio.parentElement.parentElement.querySelector("form");
     //console.log(form.parentElement); // form is null
 
     radioButtons.forEach((otherRadioButtons) => {
-      const form = otherRadioButtons.parentElement.querySelector("form");
-      console.log(otherRadioButtons.parentElement);
+      const form = otherRadioButtons.parentElement.parentElement.querySelector("form");
+      //console.log(otherRadioButtons.parentElement);
       form.style.display = "none";
     });
 
