@@ -14,10 +14,6 @@ const bookmark_btn = document.getElementById("bookmark_btn");
 // RadioButtons don't function anymore!
 const radioButtons = document.querySelectorAll("input[type=radio]");
 console.log(radioButtons);
-// I tried this, but this does not work either:
-//const radioButtons = document.querySelectorAll(".pledgeList > .modal > .gridBox > input[type=radio]");
-//console.log(radioButtons);
-const continueButtons = document.querySelectorAll("button[type=submit]");
 
 // Overlay
 const overlay = document.getElementById("overlay");
@@ -382,6 +378,17 @@ const selectBtns = document.querySelectorAll(".selectBtn");
 selectBtns.forEach((btn)=>{
   btn.onclick = display_pledgeList;
 });
+
+// Reset value after clicking Continue Button 
+const continueButtons = document.querySelectorAll("button[type=submit]");
+/*
+continueButtons.forEach((cBtn) => {
+  cBtn.addEventListener("click", () => {
+    //document.querySelectorAll('inputPledge').value = '';
+    document.querySelectorAll('inputPledge').element.reset();
+  });
+});
+*/
 
 // Remove display completion message & overlay 
 const completion_btn = document.getElementById("completion_btn");

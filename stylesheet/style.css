@@ -503,6 +503,9 @@ section:not(:first-child) {
   grid-row: 2/3;
   padding: 1.5rem 2rem;
 }
+#pledgeList form fieldset button:hover {
+  background-color: hsl(176deg, 72%, 28%);
+}
 
 #bookmark_img_on {
   display: none;
