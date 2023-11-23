@@ -238,6 +238,7 @@ function handleSubmit1(e) {
     console.log(currentBackers);
 
     completion_message.classList.add("display_completion_message");
+    document.getElementById("pledgeList").style.display = "none";
   }
 }
 
@@ -279,6 +280,7 @@ function handleSubmit2(e) {
     console.log(currentBackers);
 
     completion_message.classList.add("display_completion_message");
+    document.getElementById("pledgeList").style.display = "none";
   }
 }
 
@@ -320,6 +322,7 @@ function handleSubmit3(e) {
     console.log(currentBackers);
 
     completion_message.classList.add("display_completion_message");
+    document.getElementById("pledgeList").style.display = "none";
   }
 }
 
@@ -361,6 +364,7 @@ function handleSubmit4(e) {
     console.log(currentBackers);
 
     completion_message.classList.add("display_completion_message");
+    document.getElementById("pledgeList").style.display = "none";
   }
 }
 
