@@ -104,12 +104,14 @@ bookmark_btn.addEventListener("click", () => {
     bookmarkOff.style.display = 'none';
     bookmarkOn.style.display = 'block';
     document.getElementById("buttontext").innerHTML = btnTxt.replace("Bookmark", "Bookmarked");
+    document.getElementById("buttontext").style.color = ("	#147b74");
     console.log(btnTxt);
     } else
     {  
     bookmarkOff.style.display = 'block';
     bookmarkOn.style.display = 'none';
     document.getElementById("buttontext").innerHTML = btnTxt.replace("Bookmarked", "Bookmark");
+    document.getElementById("buttontext").style.color = ("	#7a7a7a");
     }
 });
 
@@ -397,4 +399,16 @@ completion_btn.addEventListener("click", () => {
   completion_message.classList.remove("display_completion_message");
   overlay.style.display = "none";
 });
+
+/*
+// Calculation Progressbar
+let money = 89914
+const progressbar = document.getElementById("calc_progress");
   
+function calculateProgressBar(money) {
+	// set width of progress bar
+	const totalValueNeeded = 100000
+	let progressWidth = (money * 100) / totalValueNeeded
+	progressBar.style.width = progressWidth + '%'
+};
+*/

@@ -246,11 +246,9 @@ section {
 }
 
 .status {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
+  padding: 3.5rem 2.5rem;
   @media screen and (min-width: $tablet){
-    padding-right: 5rem;
-    padding-left: 5rem;
+    padding: 4.5rem 5rem;
     text-align: left;
   }
   ul{
@@ -293,6 +291,20 @@ section {
       right: 0;
       }
     }
+  }
+  #progressbar {
+  margin-top: 3rem;
+  height: 1.3rem;
+  width: 100%;
+  background-color: rgba(122, 122, 122, 0.1);
+  border-radius: 100vw;
+  #calc_progress {
+  display: block;
+  height: 100%;
+  max-width: 80%;
+  border-radius: 100vw;
+  background-color: #3cb4ac;
+  }
   }
 }
 
