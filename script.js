@@ -1,7 +1,7 @@
 // Using strict mode helps you to catch and identify certain errors
 "use strict";
 
-// Form
+// Forms
 const form1 = document.getElementById("form1");
 const form2 = document.getElementById("form2");
 const form3 = document.getElementById("form3");
@@ -11,16 +11,16 @@ const form4 = document.getElementById("form4");
 const pL_button = document.getElementById("pledgeList_button");
 const close_pL = document.getElementById("close_pledgeList");
 const bookmark_btn = document.getElementById("bookmark_btn");
-// RadioButtons don't function anymore!
 const radioButtons = document.querySelectorAll("input[type=radio]");
-console.log(radioButtons);
+//console.log(radioButtons);
 
 // Overlay
 const overlay = document.getElementById("overlay");
 
-// Toggle Menu 
+// Menu Button
 const menuBtn = document.getElementById("menuBtn");
 
+// Toggle Menu Button:
 menuBtn.addEventListener("click", () => {
 
 const menu = document.getElementById("menuList");
@@ -28,7 +28,6 @@ const open_menu = document.getElementById("open_menu");
 const close_menu = document.getElementById("close_menu");
 const overlay = document.getElementById("overlay");
 
-  // If it's true than do this:
   if (menu.classList.contains("displayMenu")) {
     // Execute this block of code if the specified condition is true:
     menu.classList.remove("displayMenu");
@@ -37,7 +36,6 @@ const overlay = document.getElementById("overlay");
     menu.style.display = "none";
     overlay.style.display = "none";
   }
-  // If it's false than do this:
   else {
     // Execute this block of code if the specified condition is false:
     menu.classList.add("displayMenu");
@@ -48,28 +46,28 @@ const overlay = document.getElementById("overlay");
   }
 })
 
-// Display Completion Message
+// Completion Message
 const completion_message = document.querySelector(".completion_message");
 
-// Display list with Radio Buttons
+// Display list with Radio Buttons:
 function display_pledgeList() {
   document.getElementById("pledgeList").style.display = "block";
   overlay.style.display = "block";
 }
 
-// Call the function display_pledgeList() when pledgeList_button is clicked
+// Call the function display_pledgeList() when pledgeList_button is clicked:
 pL_button.onclick = display_pledgeList;
 
-// Close list with Radio Buttons
+// Close list with Radio Buttons:
 function close_pledgeList() {
   document.getElementById("pledgeList").style.display = "none";
   overlay.style.display = "none";
 }
 
-// Call the function close_pledgeList() when close_pledgeList button is clicked
+// Call the function close_pledgeList() when close_pledgeList button is clicked:
 close_pL.onclick = close_pledgeList;
 
-// Display text in button when screen resizes 
+// Display text in button when screen resizes: 
 const resize = window.matchMedia("(min-width: 700px)");
 
 function addBtnText(resize) {
@@ -78,9 +76,10 @@ function addBtnText(resize) {
   }
 }
 
+// Call function addBtnText:
 resize.addListener(addBtnText); 
 
-// Remove text in button when screen resizes 
+// Remove text in button when screen resizes:
 const resizeMobile = window.matchMedia("(max-width: 700px)");
 console.log(resizeMobile);
 
@@ -90,9 +89,10 @@ function removeBtnText(resizeMobile) {
   } 
 }
 
+// Call function removeBtnText:
 resizeMobile.addListener(removeBtnText);
 
-// Bookmark Button toggle
+// Toggle Bookmark Button:
 bookmark_btn.addEventListener("click", () => {
 
   const bookmarkOff = document.getElementById("bookmark_img_off");
@@ -118,18 +118,17 @@ bookmark_btn.addEventListener("click", () => {
 
 // Radio Buttons
 /*
-By clicking the option button, first it goes through all the buttons and deactivates each form, 
-then activates only the form of the button you clicked.
+By clicking the radio button, first it goes through all the buttons and deactivates each form, 
+then it only activates the form of the button you clicked:
 */
 radioButtons.forEach((radio) => {
   radio.addEventListener("click", () => {
-    //console.log(radio.parentElement); // parent of radio is gridBox
     const form = radio.parentElement.parentElement.querySelector("form");
-    //console.log(form.parentElement); // form is null
+    //console.log(form.parentElement.parentElement); 
 
     radioButtons.forEach((otherRadioButtons) => {
       const form = otherRadioButtons.parentElement.parentElement.querySelector("form");
-      //console.log(otherRadioButtons.parentElement);
+      //console.log(otherRadioButtons.parentElement.parentElement);
       form.style.display = "none";
     });
 
@@ -366,7 +365,7 @@ function handleSubmit4(e) {
   }
 }
 
-// ADDING THE SUBMIT EVENTLISTENER TO THE FORMS
+// ADDING THE SUBMIT EVENTLISTENER TO THE FORMS:
 form1.addEventListener("submit", handleSubmit1);
 form2.addEventListener("submit", handleSubmit2);
 form3.addEventListener("submit", handleSubmit3);
@@ -376,23 +375,12 @@ form4.addEventListener("submit", handleSubmit4);
 const selectBtns = document.querySelectorAll(".selectBtn");
 //console.log(selectBtns);
 
-// Display Pledgelist 
+// Display Pledgelist via Reward Buttons:
 selectBtns.forEach((btn)=>{
   btn.onclick = display_pledgeList;
 });
 
-// Reset value after clicking Continue Button 
-const continueButtons = document.querySelectorAll("button[type=submit]");
-/*
-continueButtons.forEach((cBtn) => {
-  cBtn.addEventListener("click", () => {
-    //document.querySelectorAll('inputPledge').value = '';
-    document.querySelectorAll('inputPledge').element.reset();
-  });
-});
-*/
-
-// Remove display completion message & overlay 
+// Remove Display Completion Message & Overlay:
 const completion_btn = document.getElementById("completion_btn");
 
 completion_btn.addEventListener("click", () => {
@@ -400,15 +388,3 @@ completion_btn.addEventListener("click", () => {
   overlay.style.display = "none";
 });
 
-/*
-// Calculation Progressbar
-let money = 89914
-const progressbar = document.getElementById("calc_progress");
-  
-function calculateProgressBar(money) {
-	// set width of progress bar
-	const totalValueNeeded = 100000
-	let progressWidth = (money * 100) / totalValueNeeded
-	progressBar.style.width = progressWidth + '%'
-};
-*/
