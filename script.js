@@ -73,6 +73,10 @@ const resize = window.matchMedia("(min-width: 700px)");
 function addBtnText(resize) {
   if (resize.matches) { // If media query matches
     document.getElementById("buttontext").innerText += "Bookmark";
+    // Set Item
+    localStorage.setItem("text", "Bookmark");
+    // Retrieve
+    document.getElementById("buttontext").innerHTML = localStorage.getItem("text");
   }
 }
 
@@ -81,7 +85,7 @@ resize.addListener(addBtnText);
 
 // Remove text in button when screen resizes:
 const resizeMobile = window.matchMedia("(max-width: 700px)");
-console.log(resizeMobile);
+//console.log(resizeMobile);
 
 function removeBtnText(resizeMobile) {
   if (resizeMobile.matches) { // If media query matches
