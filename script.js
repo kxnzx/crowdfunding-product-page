@@ -74,6 +74,7 @@ function addBtnText(resize) {
   if (resize.matches) { // If media query matches
     document.getElementById("buttontext").innerText += "Bookmark";
     /*
+    // Save value in the browser
     // Set Item
     localStorage.setItem("text", "Bookmark");
     // Retrieve
