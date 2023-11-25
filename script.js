@@ -74,6 +74,7 @@ function addBtnText(resize) {
   if (resize.matches) { // If media query matches
     document.getElementById("buttontext").innerText += "Bookmark";
     /*
+    I tried to prevent the button text from disappearing at a page refresh, but I failed. See code below:
     // Save value in the browser
     // Set Item
     localStorage.setItem("text", "Bookmark");
