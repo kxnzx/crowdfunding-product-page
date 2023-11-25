@@ -30,11 +30,11 @@ Users should be able to:
 
 #### Screensize 1440px - Desktop
 
-![Desktop](assets/images/Desktop.gif)
+![Desktop](/images/Desktop.gif)
 
 #### Screensize 375px - Mobile
 
-![Mobile](assets/images/Mobile.gif)
+![Mobile](/images/Mobile.gif)
 
 ### Links
 
@@ -62,7 +62,7 @@ Users should be able to:
 
 ### What I learned
 
-I have learned many things during the making of this project. The one thing that stood out the most for me is learning about the parentElement Property. There are many different ways to traverse throught the DOM in JavaScript. One way is by navigating up the tree DOM and select an ancestor of an element. 
+I have learned many things during the making of this project. The one thing that stood out the most for me is learning about the parentElement Property. There are many different ways to traverse through the DOM in JavaScript. One way is by navigating up the tree DOM and select an ancestor of an element. 
 
 Here it was my goal to perform actions on the parent element of the parent element of radio. This is how I did it:
 
@@ -70,7 +70,7 @@ Here it was my goal to perform actions on the parent element of the parent eleme
 const form = radio.parentElement.parentElement.querySelector("form");
 ```
 
-I needed to select the element ("form") which is nested inside it's parent element <section class="modal">. The parent element of radio is <div class="gridBox"> and his parent element is <section class="modal">. 
+I needed to select the element ("form") which is nested inside it's parent element ```<section class="modal">```. The parent element of radio is ```<div class="gridBox">``` and his parent element is ```<section class="modal">```. 
 
 ```html
  <section class="pledgeList" id="pledgeList">
