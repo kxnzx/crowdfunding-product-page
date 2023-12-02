@@ -70,35 +70,21 @@ close_pL.onclick = close_pledgeList;
 // Display text in button when screen resizes: 
 const resize = window.matchMedia("(min-width: 700px)");
 
-function addBtnText(resize) {
+resize.onchange = (e) => {
   if (resize.matches) { // If media query matches
     document.getElementById("buttontext").innerText += "Bookmark";
-    /*
-    I tried to prevent the button text from disappearing at a page refresh, but I failed. See code below:
-    // Save value in the browser
-    // Set Item
-    localStorage.setItem("text", "Bookmark");
-    // Retrieve
-    document.getElementById("buttontext").innerHTML = localStorage.getItem("text");
-    */
   }
 }
-
-// Call function addBtnText:
-resize.addListener(addBtnText); 
 
 // Remove text in button when screen resizes:
 const resizeMobile = window.matchMedia("(max-width: 700px)");
 //console.log(resizeMobile);
 
-function removeBtnText(resizeMobile) {
+resizeMobile.onchange = (e) => {
   if (resizeMobile.matches) { // If media query matches
     location.href = location.href;
   } 
 }
-
-// Call function removeBtnText:
-resizeMobile.addListener(removeBtnText);
 
 // Toggle Bookmark Button:
 bookmark_btn.addEventListener("click", () => {
