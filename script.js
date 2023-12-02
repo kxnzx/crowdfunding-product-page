@@ -206,8 +206,6 @@ function handleSubmit1(e) {
 
     const input1 = document.getElementById("pledge1");
     //console.log(input2);
-    const cBtn1 = document.getElementById("continueButton1");
-    //console.log(cBtn1);
 
     // OUTPUT 1
     const output1 = document.getElementById("currentAmount");
@@ -242,8 +240,6 @@ function handleSubmit2(e) {
     //console.log(stock1);
     const input2 = document.getElementById("pledge2");
     //console.log(input2);
-    const cBtn2 = document.getElementById("continueButton2");
-    //console.log(cBtn2);
 
     let stockAmount = 101;
     //console.log(stockAmount);
@@ -284,8 +280,6 @@ function handleSubmit3(e) {
     //console.log(stock2);
     const input3 = document.getElementById("pledge3");
     //console.log(input3);
-    const cBtn3 = document.getElementById("continueButton3");
-    //console.log(cBtn3);
 
     let stockAmount = 64;
     //console.log(stockAmount);
@@ -326,8 +320,6 @@ function handleSubmit4(e) {
     //console.log(stock3);
     const input4 = document.getElementById("pledge4");
     //console.log(input4);
-    const cBtn4 = document.getElementById("continueButton4");
-    //console.log(cBtn);
 
     let stockAmount = 1;
     //console.log(stockAmount);
@@ -364,6 +356,23 @@ form1.addEventListener("submit", handleSubmit1);
 form2.addEventListener("submit", handleSubmit2);
 form3.addEventListener("submit", handleSubmit3);
 form4.addEventListener("submit", handleSubmit4);
+
+/*
+
+form1.addEventListener(“submit”, (e) => {
+handleSubmit(e, ‘pledge1’, ‘stock1’)
+});
+form2.addEventListener(“submit”, (e) => {
+handleSubmit(e, ‘pledge2’, ‘stock2’)
+});
+form3.addEventListener(“submit”, (e) => {
+handleSubmit(e, ‘pledge3’, ‘stock3’)
+});
+form4.addEventListener(“submit”, (e) => {
+handleSubmit(e, ‘pledge4’, ‘stock4’)
+}); 
+
+*/
 
 // Select Reward Buttons 
 const selectBtns = document.querySelectorAll(".selectBtn");
