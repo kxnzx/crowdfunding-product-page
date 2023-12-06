@@ -358,7 +358,7 @@ form3.addEventListener("submit", handleSubmit3);
 form4.addEventListener("submit", handleSubmit4);
 
 
-/* I tried to refactor my code with the following: 
+/* I tried to refactor my code with the following, but it does not work: 
 // Validator
 function validateInput(input, error, errorMssg) {
   let validator = true;
