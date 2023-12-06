@@ -357,21 +357,90 @@ form2.addEventListener("submit", handleSubmit2);
 form3.addEventListener("submit", handleSubmit3);
 form4.addEventListener("submit", handleSubmit4);
 
-/*
 
-form1.addEventListener(“submit”, (e) => {
-handleSubmit(e, ‘pledge1’, ‘stock1’)
+/* I tried to refactor my code with the following: 
+// Validator
+function validateInput(input, error, errorMssg) {
+  let validator = true;
+  if (input.value < 1) {
+    input.style.borderColor = "red";
+    error.innerText = errorMssg;
+    validator = false;
+  } else {
+    input.style.borderColor = "";
+    error.innerText = "";
+    validator = true;
+  }
+  return validator;
+}
+
+// 1
+const input1 = document.getElementById("pledge1");
+const error1 = document.getElementById("small1");
+
+validateInput(input1, error1, "Minimum pledge needs to be $1");
+
+// 2 
+const input2 = document.getElementById("pledge2");
+const error2 = document.getElementById("small2");
+
+validateInput(input2, error2, "Minimum pledge needs to be $25");
+
+// 3
+const input3 = document.getElementById("pledge3");
+const error3 = document.getElementById("small3");
+
+validateInput(input3, error3, "Minimum pledge needs to be $75");
+
+// 4
+const input4 = document.getElementById("pledge4");
+const error4 = document.getElementById("small4");
+
+validateInput(input4, error4, "Minimum pledge needs to be $200");
+
+
+// Form Element 
+function handleSubmit(e) {
+  e.preventDefault();
+  if (validateInput(pledge, stock)) {
+
+    let stockAmount = 1;
+
+    stockAmount--;
+    stock.innerHTML = stockAmount;
+
+    // OUTPUT 4
+    const output1 = document.getElementById("currentAmount");
+    const output2 = document.getElementById("currentBackers");
+
+    let currentAmount = 89914;
+
+    const totalAmount = parseInt(currentAmount) + parseInt(input.value);
+    output.innerHTML = "$" + new Intl.NumberFormat().format(totalAmount);
+
+    let currentBackers = 5007;
+
+    currentBackers++;
+    output.innerHTML = new Intl.NumberFormat().format(currentBackers);
+    console.log(currentBackers);
+
+    completion_message.classList.add("display_completion_message");
+    document.getElementById("pledgeList").style.display = "none";
+  }
+}
+
+form1.addEventListener("submit", (e) => {
+handleSubmit(e, "pledge1", "stock1")
 });
-form2.addEventListener(“submit”, (e) => {
-handleSubmit(e, ‘pledge2’, ‘stock2’)
+form2.addEventListener("submit", (e) => {
+handleSubmit(e, "pledge2", "stock2")
 });
-form3.addEventListener(“submit”, (e) => {
-handleSubmit(e, ‘pledge3’, ‘stock3’)
+form3.addEventListener("submit", (e) => {
+handleSubmit(e, "pledge3", "stock3")
 });
-form4.addEventListener(“submit”, (e) => {
-handleSubmit(e, ‘pledge4’, ‘stock4’)
+form4.addEventListener("submit", (e) => {
+handleSubmit(e, "pledge4", "stock4")
 }); 
-
 */
 
 // Select Reward Buttons 
